@@ -19,7 +19,12 @@ namespace APM.WebApi.Controllers
         public List<Product> Get()
         {
             return productRepository.Retrieve();
+        }
 
+        public List<Product> Get(string search)
+        {
+            var result = productRepository.Retrieve().Where(p => p.ProductCode.StartsWith(search));
+            return result.ToList<Product>();
         }
     }
 }
