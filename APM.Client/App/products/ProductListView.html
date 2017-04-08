@@ -1,0 +1,33 @@
+﻿<div ng-controller="ProductListCtrl as vm" class="panel panel-primary">
+    <div class="panel-heading">
+        Product List
+    </div>
+
+    <div>{{test}}</div>
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ProductID</th>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>Release Date</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="product in products">
+                    <td>{{product.productId}}</td>
+                    <td>{{product.productName}}</td>
+                    <td>{{product.productCode}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{product.productId}}</td>
+                    <td>{{product.price | currency}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
