@@ -1,0 +1,34 @@
+[
+  {
+    "Description": "New product by Hemant",
+    "Price": 20.10,
+    "ProductCode": "GDN-001",
+    "ProductId": 1,
+    "ProductName": "My product",
+    "ReleaseDate": "2009-03-19T00:00:00"
+  },
+  {
+    "Description": "New product by Hemant",
+    "Price": 20.10,
+    "ProductCode": "GDN-001",
+    "ProductId": 1,
+    "ProductName": "My product",
+    "ReleaseDate": "2009-03-19T00:00:00"
+  },
+  {
+    "Description": "New product by Hemant",
+    "Price": 20.10,
+    "ProductCode": "GDN-001",
+    "ProductId": 1,
+    "ProductName": "My product",
+    "ReleaseDate": "2009-03-19T00:00:00"
+  },
+  {
+    "Description": "Unit test",
+    "Price": 10.0,
+    "ProductCode": "636272064000000000",
+    "ProductId": 2,
+    "ProductName": null,
+    "ReleaseDate": "2017-04-08T08:57:37.911812+10:00"
+  }
+]
