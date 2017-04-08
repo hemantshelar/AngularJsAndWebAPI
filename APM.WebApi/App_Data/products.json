@@ -9,7 +9,7 @@
   },
   {
     "Description": "New product by Hemant",
-    "Price": 20.10,
+    "Price": 5.10,
     "ProductCode": "GDN-001",
     "ProductId": 1,
     "ProductName": "My product",
@@ -17,7 +17,7 @@
   },
   {
     "Description": "New product by Hemant",
-    "Price": 20.10,
+    "Price": 11.10,
     "ProductCode": "GDN-001",
     "ProductId": 1,
     "ProductName": "My product",
@@ -25,7 +25,7 @@
   },
   {
     "Description": "Unit test",
-    "Price": 10.0,
+    "Price": 9.0,
     "ProductCode": "636272064000000000",
     "ProductId": 2,
     "ProductName": null,

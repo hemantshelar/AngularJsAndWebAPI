@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using System.Web.Http.OData;
 using System.Web.Mvc;
 
 namespace APM.WebApi.Controllers
@@ -16,15 +17,17 @@ namespace APM.WebApi.Controllers
     public class ProductController : ApiController
     {
         IProductRepository productRepository = new ProductRepositoryTextImpl(new ServerPathProvider());
-        public List<Product> Get()
+        [EnableQuery()]
+        public IQueryable<Product> Get()
         {
-            return productRepository.Retrieve();
+            return productRepository.Retrieve().AsQueryable<Product>();
         }
 
-        public List<Product> Get(string search)
+        [EnableQuery()]
+        public IQueryable<Product> Get(string search)
         {
-            var result = productRepository.Retrieve().Where(p => p.ProductCode.StartsWith(search));
-            return result.ToList<Product>();
+            var result = productRepository.Retrieve().Where(p => p.ProductCode.StartsWith(search)).AsQueryable<Product>();
+            return result;
         }
     }
 }

@@ -1,9 +1,29 @@
-﻿<div ng-controller="ProductListCtrl as vm" class="panel panel-primary">
+﻿<div ng-controller="ProductListCtrl as vm" class="panel panel-primary">    
     <div class="panel-heading">
-        Product List
-    </div>
+        <div class="row">
+            <div class="col-md-10">
+                <input class="form-control" type="search" data-ng-model="searchFilter" placeholder="Search Item" />
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-warning" data-ng-click="applyFilter()">Search</button>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-2">
+                <button class="btn btn-warning form-control" ng-click="odata1()"> ODATA 1</button>
+            </div>
 
-    <div>{{test}}</div>
+            <div class="col-md-2">
+                <button class="btn btn-warning form-control" ng-click="odata2()"> ODATA 2</button>
+            </div>
+
+            <div class="col-md-2">
+                <button class="btn btn-warning form-control" ng-click="odata1()"> ODATA 3</button>
+            </div>
+        </div>
+    </div>
+    
     <div class="panel-body">
         <table class="table">
             <thead>
