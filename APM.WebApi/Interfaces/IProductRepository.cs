@@ -16,5 +16,7 @@ namespace APM.WebApi.Interfaces
         void Save(Product product);
 
         void Save(int id, Product product);
+
+        Product Get(int id);
     }
 }

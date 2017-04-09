@@ -1,9 +1,17 @@
 ﻿var module = angular.module("productManagement");
 
-module.controller('ProductListCtrl', function ($scope,productResource) {
+module.controller('ProductListCtrl', function ($scope, productResource, sharedService) {
 
     $scope.products = [];
     $scope.searchFilter = "";
+
+    $scope.selectedProduct = {
+       "productId"    : "1",
+       "productName"  : "Test Product",
+       "productCode"  : "GDN-New",
+       "description"  : "Test desc",
+       "price"        : "101.09"
+    };
 
     $scope.applyFilter = function () {
         console.log("Searching....");
@@ -27,5 +35,9 @@ module.controller('ProductListCtrl', function ($scope,productResource) {
     productResource.query(function (data) {
         $scope.products = data;
     });
+
+    $scope.shareData = function () {
+        sharedService.sendData('My data');
+    }
 
 });

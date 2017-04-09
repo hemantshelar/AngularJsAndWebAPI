@@ -29,5 +29,20 @@ namespace APM.WebApi.Controllers
             var result = productRepository.Retrieve().Where(p => p.ProductCode.StartsWith(search)).AsQueryable<Product>();
             return result;
         }
+        public Product Get(int id)
+        {
+            var result = productRepository.Get(id);
+            return result;
+        }
+
+        public void Post([FromBody]Product product)
+        {
+            productRepository.Save(product);
+        }
+
+        public void Put(int id, [FromBody] Product product)
+        {
+            productRepository.Save(id, product);
+        }
     }
 }

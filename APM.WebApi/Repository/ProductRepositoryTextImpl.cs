@@ -55,5 +55,19 @@ namespace APM.WebApi.Repository
         {
             throw new NotImplementedException();
         }
+
+        public Product Get(int id)
+        {
+            Product product = null;
+            if (id > 0)
+            {
+                product = this.Retrieve().Where(p => p.ProductId == id).SingleOrDefault();
+            }
+            else
+            {
+                product = this.Create();
+            }
+            return product;
+        }
     }
 }

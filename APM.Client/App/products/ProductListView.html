@@ -1,4 +1,7 @@
 ﻿<div ng-controller="ProductListCtrl as vm" class="panel panel-primary">    
+    
+    Test2 : {{selectedProduct.productId}}
+    <button class="btn btn-primary" ng-click="shareData()">Share data</button>
     <div class="panel-heading">
         <div class="row">
             <div class="col-md-10">
@@ -49,5 +52,7 @@
             </tbody>
         </table>
     </div>
+    <product-info product="selectedProduct"></product-info>
+    
 
 </div>
